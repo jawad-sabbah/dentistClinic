@@ -1,0 +1,250 @@
+/* ============================
+   GLOBAL LAYOUT
+============================ */
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f7fb;
+}
+
+/* ============================
+   DASHBOARD BODY
+============================ */
+.dash-body {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+/* Header */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dash-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dash-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.today-date p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ============================
+   SEARCH FORM
+============================ */
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.input-text {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.input-text:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.login-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-primary-soft {
+  background-color: #e0f2fe;
+  color: #2563eb;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+}
+
+.btn-primary-soft:hover {
+  background-color: #bae6fd;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* ============================
+   TABLES
+============================ */
+.sub-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.sub-table th,
+.sub-table td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sub-table thead {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.sub-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Scrollable table */
+.scroll {
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+/* ============================
+   POPUPS / MODALS
+============================ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.popup .content {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #374151;
+  font-weight: bold;
+}
+
+/* Form inputs in popup */
+.input-text, .box {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+/* ============================
+   BUTTONS IN TABLE
+============================ */
+.button-icon {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
+@keyframes fadeIn {
+  0% {opacity:0; transform: translateY(-20px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+
+@keyframes transitionIn-Y-bottom {
+  0% {opacity:0; transform: translateY(50px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+
+/* ============================
+   SCROLLBAR
+============================ */
+.scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 4px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .dash-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sub-table th, .sub-table td {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .popup {
+    width: 90%;
+  }
+}

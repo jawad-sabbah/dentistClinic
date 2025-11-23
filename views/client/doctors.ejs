@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/animations.css">  
+<link rel="stylesheet" href="../css/index.css"> 
+<link rel="stylesheet" href="../css/client/ClientDoctors.css">
+<title>Doctors</title>
+<style>
+.popup {
+    animation: transitionIn-Y-bottom 0.5s;
+}
+.sub-table {
+    animation: transitionIn-Y-bottom 0.5s;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar -->
+    <%- include('../partials/sideBar.ejs') %>
+
+    <!-- Dashboard Body -->
+    <div class="dash-body">
+
+        <!-- Header -->
+        <div class="dash-header">
+           
+            <form action="" method="post" class="header-search">
+                <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors">
+                <datalist id="doctors">
+                    <option value="Dr. John Doe">
+                    <option value="doctor@example.com">
+                </datalist>
+                <input type="submit" value="Search" class="login-btn btn-primary btn">
+            </form>
+            <div class="dash-header-right">
+                <div class="today-date">
+                    <p>Today's Date</p>
+                    <p class="heading-sub12">2025-11-23</p>
+                </div>
+                <button class="btn-label"><img src="../img/calendar.svg" alt="calendar"></button>
+            </div>
+        </div>
+
+        <!-- Page Title -->
+        <div class="dashboard-section">
+            <h2 class="heading-main12">All Doctors (10)</h2>
+        </div>
+
+        <!-- Doctors Table -->
+        <div class="upcoming-bookings scroll">
+            <table class="sub-table scrolldown">
+                <thead>
+                    <tr>
+                        <th>Doctor Name</th>
+                        <th>Email</th>
+                        <th>Specialties</th>
+                        <th style="text-align:center;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. John Doe</td>
+                        <td>doctor@example.com</td>
+                        <td>Cardiology</td>
+                        <td>
+                            <div style="display:flex;justify-content:center;gap:10px;">
+                                <a href="#"><button class="btn-primary-soft btn button-icon btn-view">View</button></a>
+                                <a href="#"><button class="btn-primary-soft btn button-icon menu-icon-session-active">Sessions</button></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Jane Smith</td>
+                        <td>jsmith@example.com</td>
+                        <td>Neurology</td>
+                        <td>
+                            <div style="display:flex;justify-content:center;gap:10px;">
+                                <a href="#"><button class="btn-primary-soft btn button-icon btn-view">View</button></a>
+                                <a href="#"><button class="btn-primary-soft btn button-icon menu-icon-session-active">Sessions</button></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Repeat rows -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

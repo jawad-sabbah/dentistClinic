@@ -26,10 +26,13 @@ app.get('/register', (req, res) => {
 );
 
 app.get('/ClientDashboard', (req, res) => {
-  res.render('client/index');
+  res.render('client/index', { currentPage: 'home' });
 }
 );
-
+app.get('/ClientDoctors', (req, res) => {
+  res.render('client/doctors', { currentPage: 'doctors' });
+} 
+);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
