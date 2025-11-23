@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/client/ClientDashboard.css">
+  <link rel="stylesheet" href="../css/partials/sideBar.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <%- include('../partials/sideBar.ejs') %>
+
+    <!-- Dashboard Body -->
+    <main class="dash-body">
+      <!-- Header -->
+      <header class="dash-header">
+        <h1>Home</h1>
+        <div class="dash-header-right">
+          <div class="today-date">
+            <p>Today's Date</p>
+            <p class="heading-sub12">2025-11-22</p>
+          </div>
+          <button class="btn-label">
+            <img src="../img/calendar.svg" alt="Calendar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Welcome Section -->
+      <section class="welcome-section filter-container">
+        <h3>Welcome!</h3>
+        <h1>John Doe</h1>
+        <p>
+          Haven't any idea about doctors? No problem, jump to 
+          <a href="doctors.php">All Doctors</a> section or 
+          <a href="schedule.php">Sessions</a>. Track your past and future appointments history and find the expected arrival time of your doctor or consultant.
+        </p>
+
+        <h3>Channel a Doctor Here</h3>
+        <form action="schedule.php" method="post" class="search-doctor-form">
+          <input type="search" name="search" class="input-text" placeholder="Search Doctor and we will find the session available" list="doctors">
+          <datalist id="doctors">
+            <option value="Dr. Smith"></option>
+            <option value="Dr. Johnson"></option>
+            <option value="Dr. Lee"></option>
+          </datalist>
+          <input type="submit" value="Search" class="login-btn btn-primary btn">
+        </form>
+      </section>
+
+      <!-- Dashboard Cards & Upcoming Bookings -->
+      <section class="dashboard-section">
+        <div class="dashboard-cards">
+          <div class="dashboard-item">
+            <div class="dashboard-info">
+              <div class="h1-dashboard">10</div>
+              <div class="h3-dashboard">All Doctors</div>
+            </div>
+            <div class="dashboard-icon" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
+          </div>
+          <div class="dashboard-item">
+            <div class="dashboard-info">
+              <div class="h1-dashboard">25</div>
+              <div class="h3-dashboard">All Patients</div>
+            </div>
+            <div class="dashboard-icon" style="background-image: url('../img/icons/patients-hover.svg');"></div>
+          </div>
+          <div class="dashboard-item">
+            <div class="dashboard-info">
+              <div class="h1-dashboard">5</div>
+              <div class="h3-dashboard">New Booking</div>
+            </div>
+            <div class="dashboard-icon" style="background-image: url('../img/icons/book-hover.svg');"></div>
+          </div>
+          <div class="dashboard-item">
+            <div class="dashboard-info">
+              <div class="h1-dashboard">3</div>
+              <div class="h3-dashboard">Today Sessions</div>
+            </div>
+            <div class="dashboard-icon" style="background-image: url('../img/icons/session-iceblue.svg');"></div>
+          </div>
+        </div>
+
+        <!-- Upcoming Bookings -->
+        <div class="upcoming-bookings">
+          <h2>Your Upcoming Bookings</h2>
+          <div class="booking-table scroll">
+            <table class="sub-table">
+              <thead>
+                <tr>
+                  <th>Appoint. Number</th>
+                  <th>Session Title</th>
+                  <th>Doctor</th>
+                  <th>Scheduled Date & Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>General Consultation</td>
+                  <td>Dr. Smith</td>
+                  <td>2025-11-25 10:00</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Dental Checkup</td>
+                  <td>Dr. Lee</td>
+                  <td>2025-11-26 14:00</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Dental Checkup</td>
+                  <td>Dr. Lee</td>
+                  <td>2025-11-26 14:00</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Dental Checkup</td>
+                  <td>Dr. Lee</td>
+                  <td>2025-11-26 14:00</td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="no-data">
+                    <p>Nothing more to show here!</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

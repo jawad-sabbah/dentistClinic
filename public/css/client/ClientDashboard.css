@@ -1,0 +1,254 @@
+/* ============================
+   GLOBAL LAYOUT
+============================ */
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f7fb;
+}
+
+
+/* ============================
+   DASHBOARD BODY
+============================ */
+.dash-body {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+/* Header */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dash-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dash-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.today-date p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.heading-sub12 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.btn-label img {
+  width: 24px;
+  cursor: pointer;
+}
+
+/* ============================
+   WELCOME SECTION
+============================ */
+.welcome-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  background-image: url("../../img/dentist_banner.jpg");
+  background-size: cover;
+  background-position: center right;
+}
+
+.welcome-section h1 {
+  font-size: 24px;
+  margin: 5px 0 10px;
+}
+
+.welcome-section h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.welcome-section p {
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #374151;
+}
+
+/* Search form */
+.search-doctor-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.input-text {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+.input-text:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+
+/* ============================
+   DASHBOARD CARDS
+============================ */
+.dashboard-section {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+  flex: 2;
+}
+
+.dashboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.dashboard-item:hover {
+  background: #eaf2ff;
+  transform: translateY(-3px);
+}
+
+.h1-dashboard {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.h3-dashboard {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.dashboard-icon {
+  width: 48px;
+  height: 48px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ============================
+   UPCOMING BOOKINGS
+============================ */
+.upcoming-bookings {
+  flex: 1.2;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.upcoming-bookings h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.booking-table {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.sub-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sub-table th,
+.sub-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.no-data img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+
+/* ============================
+   SCROLLBAR
+============================ */
+.scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 4px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .dash-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-section {
+    padding: 20px;
+  }
+}

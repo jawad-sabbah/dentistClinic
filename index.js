@@ -16,12 +16,17 @@ app.get('/', (req, res) => {
 );
 
 app.get('/login', (req, res) => {
-  res.render('layouts/login');
+  res.render('auth/login');
 }
 ); 
 
 app.get('/register', (req, res) => {
-  res.render('layouts/register');
+  res.render('auth/register');
+}
+);
+
+app.get('/ClientDashboard', (req, res) => {
+  res.render('client/index');
 }
 );
 
