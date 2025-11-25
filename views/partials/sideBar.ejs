@@ -11,20 +11,20 @@
   </div>
   <nav class="menu-nav">
     <ul>
-      <li class="menu-row <%= currentPage === 'home' ? 'menu-active' : '' %>">
+      <li class="menu-row  <%= currentPage === 'home' ? 'menu-active' : '' %>">
         <a href="/ClientDashboard"><span class="menu-icon menu-icon-home"></span>Home</a>
       </li>
       <li class="menu-row <%= currentPage === 'doctors' ? 'menu-active' : '' %>">
         <a href="/ClientDoctors"><span class="menu-icon menu-icon-doctor"></span>All Doctors</a>
       </li>
-      <li class="menu-row <%= currentPage === 'schedule' ? 'menu-active' : '' %>">
-        <a href="/ClientSchedule"><span class="menu-icon menu-icon-session"></span>Scheduled Sessions</a>
+      <li class="menu-row <%= currentPage === 'sessions' ? 'menu-active' : '' %>">
+        <a href="/ClientSessions"><span class="menu-icon menu-icon-session"></span>Scheduled Sessions</a>
       </li>
       <li class="menu-row <%= currentPage === 'bookings' ? 'menu-active' : '' %>">
         <a href="/ClientBookings"><span class="menu-icon menu-icon-appoinment"></span>My Bookings</a>
       </li>
-      <li class="menu-row <%= currentPage === 'settings' ? 'menu-active' : '' %>">
-        <a href="/ClientSettings"><span class="menu-icon menu-icon-settings"></span>Settings</a>
+      <li class="menu-row <%= currentPage === 'setting' ? 'menu-active' : '' %>">
+        <a href="/ClientSetting"><span class="menu-icon menu-icon-settings"></span>Settings</a>
       </li>
     </ul>
   </nav>

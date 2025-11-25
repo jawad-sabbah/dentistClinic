@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/animations.css">  
+    <link rel="stylesheet" href="../css/index.css"> 
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../css/client/ClientSessions.css">
+
+    <title>Sessions</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <%- include('../partials/sideBar.ejs') %>
+
+    <!-- MAIN BODY -->
+    <div class="dash-body">
+
+        <!-- HEADER BAR -->
+        <div class="header-actions">
+           
+
+            <form class="header-search">
+                <input type="search" name="search" class="header-searchbar"
+                       placeholder="Search doctor or session…" list="doctors">
+
+                <datalist id="doctors">
+                    <option value="Dr. Smith">
+                    <option value="Dr. John Walker">
+                    <option value="Dental Checkup">
+                    <option value="Eye Consultation">
+                    <option value="General Session">
+                </datalist>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <!-- TABLE: SESSIONS -->
+        <div class="sub-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Session Title</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Slots</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Dr. Smith</td>
+                        <td>General Consultation</td>
+                        <td>2025-12-10</td>
+                        <td>09:00 – 11:00 AM</td>
+                        <td>5</td>
+                        <td><button class="btn btn-primary">Book Now</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. John Walker</td>
+                        <td>Dental Checkup</td>
+                        <td>2025-12-12</td>
+                        <td>02:00 – 04:00 PM</td>
+                        <td>3</td>
+                        <td><button class="btn btn-primary">Book Now</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. Amelia Rose</td>
+                        <td>Eye Consultation</td>
+                        <td>2025-12-15</td>
+                        <td>10:00 – 12:00 PM</td>
+                        <td>8</td>
+                        <td><button class="btn btn-primary">Book Now</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. Brandon Lee</td>
+                        <td>Child Health Check</td>
+                        <td>2025-12-18</td>
+                        <td>01:00 – 03:00 PM</td>
+                        <td>6</td>
+                        <td><button class="btn btn-primary">Book Now</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. Katherine Brooks</td>
+                        <td>Skin Treatment</td>
+                        <td>2025-12-20</td>
+                        <td>11:00 – 01:00 PM</td>
+                        <td>4</td>
+                        <td><button class="btn btn-primary">Book Now</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

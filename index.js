@@ -34,6 +34,22 @@ app.get('/ClientDoctors', (req, res) => {
 } 
 );
 
+app.get('/ClientSessions', (req, res) => {
+  res.render('client/sessions', { currentPage: 'sessions' });
+}
+);
+
+app.get('/ClientBookings', (req, res) => {
+  res.render('client/bookings', { currentPage: 'bookings' });
+}
+);
+
+app.get('/ClientSetting', (req, res) => {
+  res.render('client/setting', { currentPage: 'setting' });
+}
+);
+
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 }

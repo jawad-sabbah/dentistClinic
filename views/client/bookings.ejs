@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/client/ClientBookings.css">
+    <title>My Bookings</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <%- include('../partials/sideBar.ejs') %>
+
+    <!-- MAIN BODY -->
+    <div class="dash-body">
+
+        <!-- Page Header -->
+        <div class="dash-header">
+            <h1 class="title">My Bookings</h1>
+            <div class="dash-header-right">
+                <div class="today-date">
+                    <p>Today: <span id="today-date">2025-11-25</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <div class="search-container">
+            <input type="search" placeholder="Search booking..." class="search-input input-text">
+        </div>
+
+        <!-- Bookings Table -->
+        <div class="scrollable-table">
+            <table class="bookings-table sub-table">
+                <thead class="table-header-blue">
+                    <tr>
+                        <th>Session</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>General Checkup</td>
+                        <td>2025-02-18</td>
+                        <td>10:00 AM</td>
+                        <td>Dr. Sarah Johnson</td>
+                        <td><span class="status status-pending upcoming">Upcoming</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dental Cleaning</td>
+                        <td>2025-02-20</td>
+                        <td>03:30 PM</td>
+                        <td>Dr. Mark Lee</td>
+                        <td><span class="status status-success completed">Completed</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Skin Consultation</td>
+                        <td>2025-02-25</td>
+                        <td>09:15 AM</td>
+                        <td>Dr. Alicia Gomez</td>
+                        <td><span class="status status-cancelled cancelled">Cancelled</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Eye Examination</td>
+                        <td>2025-03-02</td>
+                        <td>01:00 PM</td>
+                        <td>Dr. William Carter</td>
+                        <td><span class="status status-pending upcoming">Upcoming</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
